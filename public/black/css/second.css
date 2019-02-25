@@ -1,0 +1,8 @@
+.lt_main .main table th,
+.lt_main .main table td {
+    vertical-align: middle;
+    text-align: center;
+}
+.main {
+    padding-right: 20px;
+}

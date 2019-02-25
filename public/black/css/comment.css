@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+/* 背景色 */
+.bg_color {
+    background-color: #222D32;
+}
+
+/* 登录页面---------------------------------------- */
+ h3 {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
+ .mpL {
+    margin-top: 150px;
+}
+/* //分页面共同部分-------------------------------------------- */
+.lt_aside {
+    position: fixed;
+    width: 180px;
+    left: 0;
+    height: 100%;
+    background-color: #222D32;
+    top: 0;
+    transition: all 1s;
+}
+/* 点击事件 */
+.lt_aside.hides{
+    left: -180px;
+}
+
+.lt_aside .brand {
+    width: 100%;
+    height: 50px;
+    background-color: #367FA9;
+}
+.lt_aside .brand a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    text-decoration: none;
+}
+.lt_aside .user {
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+.lt_aside .user img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+.lt_aside .pages {
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+}
+.lt_aside .pages ul {
+    list-style-type: none;
+    width: 100%;
+    transition: all 1s;
+}
+.lt_aside .pages ul li {
+    width: 100%;
+}
+/* 切换页面用 */
+.lt_aside .pages ul li.current {
+  background-color: rgb(58, 56, 56);
+}
+.lt_aside .pages ul .child ol{
+  display: none;
+}
+
+.lt_aside .pages ul li a {
+    display: block;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+.lt_aside .pages ul li a span {
+    margin-left: 5px;
+}
+.lt_main {
+    width: 100%;
+    height: 100%;
+    margin-left: 180px;
+    padding-top: 60px;
+    transition: all 1s;
+}
+/* 切换类 */
+.lt_main.tog {
+    margin-left: 0;
+}
+
+.lt_main .tops {
+    height: 50px;
+    background-color: #3C8DBC;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-left: 180px;
+    transition: all 1s;
+    background-clip: content-box;
+    background-origin: content-box;
+    transition: all 1s;
+}
+/* 切换类 ------------------------*/
+.lt_main .tops.hove {
+    padding-left: 0;
+}
+
+.lt_main .tops a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 18px;
+}
+.lt_main  {
+    padding-left: 10px;
+}
+.lt_main  .nav {
+    height: 30px;
+    background-color:  #f5f5f5;
+    line-height: 30px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.lt_main  .bom {
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+}
+.lt_main  .bom .left,
+.lt_main  .bom .right {
+    position: absolute;
+    width: 45%;
+    height: 400px;
+    background-color: skyblue;
+    top: 0;
+}
+.lt_main  .bom .left {
+    left: 0;
+}
+.lt_main  .bom .right {
+    right: 0;
+}
+.lt_main  .nav a {
+    text-decoration: none;
+}
+.lt_main  .nav a:nth-child(2) {
+    color: #666;
+}
+.modal p{
+ color: red;
+}
+

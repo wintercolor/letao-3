@@ -1,0 +1,5 @@
+ .lt_main .main table th,
+ .lt_main .main table td{
+    text-align: center;
+    vertical-align: middle;
+}
