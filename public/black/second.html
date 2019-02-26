@@ -85,42 +85,50 @@
         </div>
     </div>
     <!-- 模态框--添加二级分类 -->
-    <div class="modal fade" tabindex="-1" role="dialog" id="newModal">
+    <div class="modal fade" tabindex="-1"  id="newModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <form id="addForm">
+                <form id="form">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title">添加分类</h4>
                     </div>
                     <div class="modal-body">
+                            <div class="form-group">
                         <div class="dropdown">
                             <button id="dLabel" type="button" class="btn btn-default" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 <span class="tel">添加分类</span>
                                 <span class="caret"></span>
                             </button>
+                            
                             <ul class="dropdown-menu" aria-labelledby="dLabel" id="addLis">
 
                             </ul>
                         </div>
+                        <!-- 隐藏域 -->
+                        <input type="hidden" name="categoryId" id="picDddr">
+                            </div>
+
                         <div class="form-group">
-                            <input type="text"name= "brandName" class="form-control" id="brandName" placeholder="Jane Doe" placeholder="请输入二级类名">
+                            <input type="text" name="brandName" class="form-control"  placeholder="请输入二级类名">
                         </div>
                         <div class="form-group">
-                            <label for="fileImg" class="btn btn-default">上传图片</label>
-                            <input type="file" id="fileImg" style="display:none" ">
+                            <label for="fileupload" class="btn btn-default">上传图片</label>
+                            <input type="file" id="fileupload" style="display:none" name="pic1" 
+                            data-url="/category/addSecondCategoryPic">
                             
                         </div>
                         <div class="form-group">
-                            <img src="./image/none.png" alt="" height="100px" >
+                            <img src="./image/none.png" alt="" height="100px"  id="dataImg">
+                            <input type="hidden" name="brandLogo" >
                                 
                             </div>
 
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                        <button type="button" class="btn btn-primary">提交</button>
+                        <button type="submit" class="btn btn-primary">提交</button>
                     </div>
                 </form>
             </div>
@@ -138,18 +146,22 @@
             </tr>
             {{/each}}
     </script>
-    <!-- 模板2-渲染二级菜单 -->
+    <!-- 模板2-渲染一级菜单 -->
     <script type="text/html" id="tmpNew">
         {{each rows v i }}
-       <li><a href="#">{{v.brandName}}</a></li>
+       <li><a href="#" data-id="{{v.id}}">{{v.categoryName}}</a></li>
      {{/each}}
     </script>
     <script src="./lib/jquery/jquery.js"></script>
-    <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
+  
     <script src="./lib/bootstrap/js/bootstrap.js"></script>
-    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
     <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
+
     <script src="./js/comment.js"></script>
     <script src="./js/isLogin.js"></script>
     <script src="./js/second.js"></script>
